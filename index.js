@@ -20,7 +20,7 @@ app.post("/add-wallet-to-groups",async(req,res)=>{
     console.log("Hiiiiiiiiiiiiiiii")
      res.status(200).json({
             status: true,
-        / });
+         });
 })
 
 
