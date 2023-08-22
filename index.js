@@ -20,7 +20,7 @@ app.post("/add-wallet-to-groups",async(req,res)=>{
   // try{
     console.log("Hiiiiiiiiiiiiiiii")
    if(req.body)
-    console.log("payload",req.body.payload.user.email)
+    console.log("payload",req.body.user.email)
     // if(req.body.user.email){
     // console.log('body',req.body.user.email)
     // }
