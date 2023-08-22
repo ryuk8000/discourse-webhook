@@ -22,14 +22,14 @@ app.post("/add-wallet-to-groups",async(req,res)=>{
    if(req.body){
     console.log("payload",req.body.user.email)
      axios
-        .post(
+        .get(
           `https://forum-web3-connect.discourse.group/groups/46/members.json`,
           {
             "emails" : `${req.body.user.email}`
           },
           {
             headers: {
-              "content-type": "application/json",
+              "Content-Type": "application/json",
               "Api-Key" : "27c5ed1e15ab4430dafe356e8fbfef878b2c727ab593aa72933499b4c1e64a6d",
               "Api-Username" : "ryuk8954"
             },
