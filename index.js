@@ -19,19 +19,36 @@ app.use(
 app.post("/add-wallet-to-groups",async(req,res)=>{
   // try{
     console.log("Hiiiiiiiiiiiiiiii")
-   if(req.body)
+   if(req.body){
     console.log("payload",req.body.user.email)
-    // if(req.body.user.email){
-    // console.log('body',req.body.user.email)
-    // }
-  // } catch(err){
-  //   console.log("err")
-  // }
-  res.status(200).json({
+     axios
+        .post(
+          `https://forum-web3.discourse.group/groups/46/members.json`,
+          {
+            "emails" : `${req.body.user.email}`
+          },
+          {
+            headers: {
+              "content-type": "application/json",
+              "Api-Key" : "27c5ed1e15ab4430dafe356e8fbfef878b2c727ab593aa72933499b4c1e64a6d",
+              "Api-Username" : "ryuk8954"
+            },
+          }
+        )
+        .then((res) => {
+            res.status(200).json({
                 status: true,
-                title: "Details Submitted Successfully.",
+                title: "Email added to group successfully.",
               });
-  
+        })
+        .catch((err) => {
+           res.status(400).json({
+                status : false,
+                title: "Problem adding group to specific group"
+           })
+        });
+   }
+   
        
 })
 
