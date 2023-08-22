@@ -36,12 +36,14 @@ app.post("/add-wallet-to-groups",async(req,res)=>{
           }
         )
         .then((res) => {
+            console.log("added")
             res.status(200).json({
                 status: true,
                 title: "Email added to group successfully.",
               });
         })
         .catch((err) => {
+          console.log("not added")
            res.status(400).json({
                 status : false,
                 title: "Problem adding group to specific group"
