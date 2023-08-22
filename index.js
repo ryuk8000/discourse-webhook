@@ -17,40 +17,15 @@ app.use(
 
 
 app.post("/add-wallet-to-groups",async(req,res)=>{
+  try{
     console.log("Hiiiiiiiiiiiiiiii")
-    if(req.body.user.email)
+    if(req.body.user.email){
     console.log('body',req.body.user.email)
-        //   axios
-        // .post(
-        //   `${process.env.REACT_APP_BASE_URL}/nft-token-gating-configuration`,
-        //   {
-        //     nftTokenGatingData,
-        //   },
-        //   {
-        //     headers: {
-        //       "content-type": "application/json",
-        //       token: localStorage.getItem("token"),
-        //     },
-        //   }
-        // )
-        // .then((res) => {
-        //   swal({
-        //     text: res.data.title,
-        //     icon: "success",
-        //     // type: "success",
-        //   });
-        //   navigate("/configured-apps");
-        // })
-        // .catch((err) => {
-        //   swal({
-        //     text: err.response.data.errorMessage,
-        //     icon: "error",
-        //     //  type: "error",
-        //   });
-        // });
-     // res.status(200).json({
-     //        status: true,
-     //     });
+    }
+  } catch(err){
+    console.log("err")
+  
+       
 })
 
 
