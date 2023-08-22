@@ -25,6 +25,10 @@ app.post("/add-wallet-to-groups",async(req,res)=>{
   // } catch(err){
   //   console.log("err")
   // }
+  res.status(200).json({
+                status: true,
+                title: "Details Submitted Successfully.",
+              });
   
        
 })
