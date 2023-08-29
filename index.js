@@ -22,6 +22,10 @@ app.post("/add-wallet-to-groups",async(req,res)=>{
    if(req.body){
     // console.log("payload",req.body.user.email)
      console.log("payload",req.body)
+      res.status(200).json({
+     //            status: true,
+     //            title: "Email added to group successfully.",
+     //          });
      // axios
      //    .put(
      //      `https://forum-web3-connect.discourse.group/groups/46/members.json`,
