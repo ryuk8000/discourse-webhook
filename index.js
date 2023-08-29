@@ -21,34 +21,34 @@ app.post("/add-wallet-to-groups",async(req,res)=>{
     console.log("Hiiiiiiiiiiiiiiii")
    if(req.body){
     console.log("payload",req.body.user.email)
-     axios
-        .put(
-          `https://forum-web3-connect.discourse.group/groups/46/members.json`,
-          {
-            "emails" : `${req.body.user.email}`
-          },
-          {
-            headers: {
-              "Content-Type": "application/json",
-              "Api-Key" : "27c5ed1e15ab4430dafe356e8fbfef878b2c727ab593aa72933499b4c1e64a6d",
-              "Api-Username" : "ryuk8954"
-            },
-          }
-        )
-        .then((res) => {
-            console.log("added")
-            res.status(200).json({
-                status: true,
-                title: "Email added to group successfully.",
-              });
-        })
-        .catch((err) => {
-          console.log("not added")
-           res.status(400).json({
-                status : false,
-                title: "Problem adding group to specific group"
-           })
-        });
+     // axios
+     //    .put(
+     //      `https://forum-web3-connect.discourse.group/groups/46/members.json`,
+     //      {
+     //        "emails" : `${req.body.user.email}`
+     //      },
+     //      {
+     //        headers: {
+     //          "Content-Type": "application/json",
+     //          "Api-Key" : "27c5ed1e15ab4430dafe356e8fbfef878b2c727ab593aa72933499b4c1e64a6d",
+     //          "Api-Username" : "ryuk8954"
+     //        },
+     //      }
+     //    )
+     //    .then((res) => {
+     //        console.log("added")
+     //        res.status(200).json({
+     //            status: true,
+     //            title: "Email added to group successfully.",
+     //          });
+     //    })
+     //    .catch((err) => {
+     //      console.log("not added")
+     //       res.status(400).json({
+     //            status : false,
+     //            title: "Problem adding group to specific group"
+     //       })
+     //    });
    }
    
        
